@@ -14,6 +14,7 @@ type_sortie nom_fonction(parametres)
   
 }//nom_fonction
 
+
 -utiliser "using namespace" uniquement dans les fichiers autres que main.cpp 
 
 -tout les appels a des fonctions du raspberry pi pico se fait dans le main.cpp
@@ -23,5 +24,3 @@ type_sortie nom_fonction(parametres)
 -pour le mouvement des moteurs: on calcul l'écart entre la position réelle du moteur, et on cherche a réduire cet écart
 
 -la lecture DMX et son(gpio 1) se fera dans le coeur 2 
-
--
