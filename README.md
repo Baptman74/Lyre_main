@@ -23,8 +23,8 @@ type_sortie nom_fonction(parametres)
 
 -tout les appels a des fonctions du raspberry pi pico se fait dans le main.cpp
 
--les sorties forment une struct avec les valeurs des variables (luminosité, posisiton moteur, etc) 
+-les sorties forment une struct avec les valeurs des variables (luminosité, positon moteur, etc) 
 
--pour le mouvement des moteurs: on calcul l'écart entre la position réelle du moteur, et on cherche a réduire cet écart
+-pour le mouvement des moteurs, on calcule l'écart entre la position réelle du moteur et la consigne, et on cherche a réduire cet écart
 
 -la lecture DMX et son(gpio 1) se fera dans le coeur 2 
