@@ -3,7 +3,9 @@ code principal pour la lyre polybot.
 
 
 normes et specificitées de code:
+
 -fonctions:
+
 //indications sur ce que fait la fonction
 
 type_sortie nom_fonction(parametres)
@@ -13,6 +15,8 @@ type_sortie nom_fonction(parametres)
   code
   
 }//nom_fonction
+
+
 
 
 -utiliser "using namespace" uniquement dans les fichiers autres que main.cpp 
