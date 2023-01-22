@@ -5,24 +5,18 @@
 using namespace motor_ctrl;
 
 //calcul le nombre de pas entre la position actuelle et la position a atteindre
-uint8_t nb_step(uint couleur, uint position_actuelle)
+uint16_t nb_step(uint pos_moteur_couleur, uint8_t position_precedente_couleur)
 {
-  //couleur entre 0 et 7 en entrée
-
-  uint8_t nb_step_sens[2] = {0,0};
-  int dist = couleur - position_actuelle;
-
-  if (dist<0)
+  uint16_t abs_dist_couleur = abs(position_precedente_couleur - pos_moteur_couleur);
+  if (abs_dist_couleur>100)
   {
-    nb_step_sens[0] = 0;
-    nb_step_sens[1] = -dist*24;
+    uint16_t dist_plus_courte_couleur = (200 - abs_dist_couleur)*10+1;
   }
-  else if(dist > 0)
+  else
   {
-    nb_step_sens[0] = 1;
-    nb_step_sens[1] = dist*24;
+    uint16_t dist_plus_courte_couleur = abs_dist_couleur*10;
   }
-  return nb_step_sens;
+  return abs_dist_couleur;
 } //nb_step
 
 //calcul le demi temps pour 1 pas (pin on, timing, pin low, timing etc)
